@@ -5,9 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "start": "NODE_ENV=development webpack-dev-server --mode development --open",
+    "dev": "NODE_ENV=development webpack --mode development",
+    "build": "NODE_ENV=production webpack --mode production"
   },
   "keywords": [
     "boilerplate",
@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^2.9.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.1.0",
+    "mini-css-extract-plugin": "^0.2.0",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.3",
     "sass-loader": "^6.0.7",
