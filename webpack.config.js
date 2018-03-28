@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 let config = {
   entry: './src/index.js',
   output:  {
-    filename: 'bundle.js',
+    filename: 'static/js/[name].[chunkhash:8].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -49,8 +49,8 @@ let config = {
       filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
-      chunkFilename: '[name].css',
+      filename: '/static/css/[name].[hash:8].css',
+      chunkFilename: '/static/css/[name].[hash:8].css',
     }),
   ]
 };
