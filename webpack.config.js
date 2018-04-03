@@ -26,7 +26,10 @@ let config = {
         test: /\.html$/,
         use: {
           loader: 'html-loader',
-          options: { minimize: true }
+          options: {
+            minimize: true,
+            attrs: ['img:src', 'use:xlink:href'],
+          }
         }
       },
       {
@@ -40,7 +43,18 @@ let config = {
             }
           }
         ]
-      }
+      },
+      {
+        test: [/\.svg$/],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'static/media/[name].[hash:8].[ext]',
+            }
+          }
+        ]
+      },
     ]
   },
   plugins: [

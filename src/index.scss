@@ -1,5 +1,12 @@
+/* styling for demo purposes only */
 $color: pink;
 
 body {
     background-color: $color;
+}
+
+img, svg {
+  display: block;
+  width: 5vw;
+  height: 5vw;
 }

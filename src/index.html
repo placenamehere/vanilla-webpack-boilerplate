@@ -8,6 +8,13 @@
     <div id="app">
       Hello World
     </div>
+    <!-- testing inclusion of .png with simple img:src -->
     <img src="box.png" alt="a box" />
+    <!-- testing inclusion of .svg use:xlink to access DOM  -->
+    <svg viewBox="0 0 65 65">
+       <use xlink:href="star.svg#Page-1"></use>
+    </svg>
+    <!-- testing inclusion of .svg with simple img:src -->
+    <img src="star.svg" alt="a star" />
 </body>
 </html>
